@@ -17,7 +17,7 @@ RICE is able to refine initial instance segmentation masks by sampling these per
 
 ### Guiding a Manipulator with Contour Uncertainties from RICE
 
-We demonstrate a proof-of-concept efficient scene understanding application that utilizes uncertainties output by RICE to guide a manipulator.
+We demonstrate a proof-of-concept efficient scene understanding application that utilizes uncertainties output by RICE to guide a manipulator. You can find the full video [here](https://www.youtube.com/watch?v=fIM80ZqH77A).
 
 <p align="center"><img src="media/uncertainty_grasping.gif" width="480" /></p>
 
