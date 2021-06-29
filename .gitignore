@@ -1,0 +1,11 @@
+# Ipython/python stuff
+__pycache__/
+.ipynb_checkpoints/
+*.pyc
+
+# PyTorch checkpoints
+*.pth.tar
+*.pth
+
+# MacOS stuff
+*.DS_Store
