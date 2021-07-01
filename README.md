@@ -1,4 +1,9 @@
 # RICE: Refining Instance Masks in Cluttered Environments with Graph Neural Networks
+This is the codebase for our paper:
+
+[RICE: Refining Instance Masks in Cluttered Environments with Graph Neural Networks](https://arxiv.org/abs/2106.15711)<br/>
+[Christopher Xie](https://chrisdxie.github.io/), [Arsalan Mousavian](https://cs.gmu.edu/~amousavi/), [Yu Xiang](https://yuxng.github.io/), [Dieter Fox](https://homes.cs.washington.edu/~fox/)<br/>
+arXiv, 2021
 
 ## Introduction
 
