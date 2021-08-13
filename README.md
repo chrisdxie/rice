@@ -34,4 +34,50 @@ We show an example of a sample tree with branch factor B=2 and K=2 expansion ite
 
 ## Code
 
-Coming Soon!
+### Installation
+
+We highly recommend setting up a virtual environment using [Anaconda](https://www.anaconda.com/). Here is an example setup using these tools:
+
+```
+git clone --recurse-submodules https://github.com/chrisdxie/rice.git
+cd rice
+conda env create -f env.yml
+```
+Note: Currently, [env.yml](env.yml) is setup to use CUDA version 10.2 and PyTorch 1.8.0. With these settings, PyTorch Geometric can be installed via `conda` as well. If you need to use an older version of CUDA and/or PyTorch, you'll have to install Pytorch Geometric [manually](https://pytorch-geometric.readthedocs.io/en/latest/notes/installation.html#installation-via-pip-wheels) via Pip wheels, but it should be pretty easy.
+
+### Models
+
+You can find the models [here](https://drive.google.com/uc?export=download&id=1hM47s_mjhdK2gPRgZJaESjMP_OA78qVn). We provide models for SplitNet, DeleteNet and SGS-Net trained on our synthetic Tabletop Object Dataset (which slightly more cluttered than [before](https://github.com/chrisdxie/uois)). 
+
+### Data
+
+Coming soon!
+
+### Train the network
+
+We provide sample training code for SplitNet, DeleteNet, and SGS-Net in [train.ipynb](train.ipynb).
+
+### Running RICE!
+
+See [RICE_example.ipynb](RICE_example.ipynb) for an example of how to run RICE on provided example images. In order to run this file, Jupyter Notebook must be installed (this is included in `env.yml`). If you haven't used Jupyter Notebooks before, [here](https://www.dataquest.io/blog/jupyter-notebook-tutorial/) is a tutorial to get you up to speed. This repository provides a few images in the [example_images](example_images/) folder. 
+
+Notes:
+
+* Make sure to activate the Anaconda environment before running jupyter. This can be done with ``` conda activate rice; jupyter notebook ```
+* the notebook should be run in the directory in which it lives (`<ROOT_DIR>`), otherwise the filepaths and imports must be manually adjusted.
+* After downloading and unzipping the models, make sure to update the notebook to point to where the models live. Look for the `TODO`'s.
+* In order to run the notebook, you will also need to download the UOIS-Net-3D [models](https://github.com/chrisdxie/uois) and also edit those filepaths in the notebook.
+
+## Citation
+Our code is released under the MIT license.
+
+If you find our work helpful in your research, please cite our work.
+
+```
+@article{xie2021rice,
+author    = {Christopher Xie and Arsalan Mousavian and Yu Xiang and Dieter Fox},
+title     = {RICE: Refining Instance Masks in Cluttered Environments with Graph Neural Networks},
+journal   = {arXiv preprint arXiv:2106.15711},
+year      = {2021}
+}
+```
