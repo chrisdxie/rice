@@ -1,0 +1,7 @@
+branch_factor : 2
+num_iterations : 3
+num_perturbations : 2
+perturbation_threshold : 0.7
+max_nodes_in_batch : 350
+max_edges_in_batch : 1750
+min_pixels_thresh : 250

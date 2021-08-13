@@ -1,0 +1,46 @@
+
+# Training params
+lr: 1.e-4  # learning rate
+iter_collect: 20  # Collect results every _ iterations
+max_iters: 200000
+
+# Tensorboard stuff
+tb_directory: joint_split_delete_training
+flush_secs: 10  # Write tensorboard results every _ seconds
+
+trainable_layer_names:  # for ResNet50+FPN
+    - body.conv1.weight
+    - body.layer1.0
+
+# Padding stuff
+padding_config:
+    inference: False
+    padding_alpha: 1.0
+    padding_beta: 4.0
+    min_padding_percentage: 0.15
+    new_H: 64
+    new_W: 64
+
+# Mask perturbation stuff
+perturbed_masks_min: 1
+perturbed_masks_max: 4
+
+rate_of_rotation: 0.
+rotation_angle_max: 10  # in degrees
+
+rate_of_label_cutting: 0.
+cut_percentage_min: 0.25
+cut_percentage_max: 0.5
+
+rate_of_label_adding: 1.
+add_percentage_min: 0.05
+add_percentage_max: 0.2
+
+max_augmentation_tries: 10
+
+# Starting optimization from previous checkpoint
+load: False
+iter_num: 200000  # Used only if load = True
+
+# Misc
+min_pixels_thresh: 250

@@ -1,0 +1,44 @@
+dsn_config:
+
+    # Sizes
+    feature_dim: 64
+
+    # Mean Shift parameters (for 3D voting)
+    max_GMS_iters: 10
+    num_seeds: 200  # Used for MeanShift, but not BlurringMeanShift
+    epsilon: 0.05  # Connected Components parameter
+    sigma: 0.02  # Gaussian bandwidth parameter
+    subsample_factor: 5
+    min_pixels_thresh: 300
+    
+    # Differentiable backtracing params
+    tau: 15.
+    M_threshold: 0.3
+    
+    # Robustness stuff
+    angle_discretization: 100
+    discretization_threshold: 0.
+
+rrn_config:
+    
+    # Sizes
+    feature_dim: 64
+    img_H: 224
+    img_W: 224
+    
+    # architecture parameters
+    use_coordconv: False
+    
+uois_config:
+    
+    # Padding for RGB Refinement Network
+    padding_percentage: 0.25
+    
+    # Open/Close Morphology for IMP (Initial Mask Processing) module
+    use_open_close_morphology: True
+    open_close_morphology_ksize: 9
+    
+    # Largest Connected Component for IMP module
+    use_largest_connected_component: True
+    
+    final_close_morphology: False

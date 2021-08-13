@@ -1,0 +1,3 @@
+[submodule "src/uois"]
+	path = src/uois
+	url = https://github.com/chrisdxie/uois.git

@@ -1,0 +1,56 @@
+
+# Training params
+lr: 1.e-4  # learning rate
+iter_collect: 20  # Collect results every _ iterations
+max_iters: 100000
+
+# Which modality-tuned ResNet50+FPN to use. It should come from joint SplitNet/DeleteNet training
+pretrained_tb_path: joint_split_delete_training
+pretrained_iter_num: 605  # How many iters was SplitNet/DeleteNet trained for? 
+trainable_layer_names: []  # for ResNet50+FPN
+    
+# Sample tree stuff
+num_tree_building_iterations: 3
+branch_factor: 3 
+num_perturbations: 3  # Number of merges/splits/deletes per sample
+
+# For sampling additions. Taken from deletenet_joint_training.yml
+random_add_config:
+
+    rate_of_rotation: 0.
+    rotation_angle_max: 10  # in degrees
+
+    rate_of_label_cutting: 0.
+    cut_percentage_min: 0.25
+    cut_percentage_max: 0.5
+
+    rate_of_label_adding: 1.
+    add_percentage_min: 0.05
+    add_percentage_max: 0.2
+
+    max_augmentation_tries: 10
+
+    min_pixels_thresh: 250
+
+# Graph stuff
+gc_neighbor_dist: 10
+max_nodes_in_batch: 100
+max_edges_in_batch: 300
+max_graphs_in_batch: 100
+
+# Padding stuff
+padding_config:
+    inference: False
+    padding_alpha: 1.0
+    padding_beta: 4.0
+    min_padding_percentage: 0.05
+    new_H: 64
+    new_W: 64
+
+# Tensorboard stuff
+tb_directory: sgsnet_training
+flush_secs: 10  # Write tensorboard results every _ seconds
+
+# Starting optimization from previous checkpoint
+load: False
+iter_num: 100000  # Used only if load = True

@@ -1,0 +1,21 @@
+TOD_filepath : '/data/tabletop_dataset_v6/'  # TODO: set this path
+
+# Camera/Frustum parameters
+img_width : 640 
+img_height : 480
+near : 0.01
+far : 100
+fov : 45  # vertical field of view in angles
+
+use_data_augmentation : True
+
+# Multiplicative noise
+gamma_shape : 1000.
+gamma_scale : 0.001
+
+# Additive noise
+gaussian_scale_range : [0., 0.003]  # up to 2.5mm standard dev
+gp_rescale_factor_range : [12, 20]  # [low, high (exclusive)]
+
+# Base predictions (can just use GT labels)
+predictions_path : '/data/tabletop_dataset_v6/training_set/'  # TODO: set this path

@@ -1,0 +1,22 @@
+node_encoder_config:
+
+    rgb_encoder_config:
+        type: cnn # ['cnn' or 'linear']
+        input_channels: 256
+        output_channels: 256
+
+    depth_encoder_config:
+        type: cnn  # ['cnn' or 'linear']
+        input_channels : 3
+        output_channels : 256
+
+    mask_encoder_config:
+        type: cnn  # ['cnn' or 'linear']
+        input_channels: 1
+        output_channels: 64
+
+decoder_config:
+    output_channels: 32
+
+img_size: [64,64]
+boundary_probability_threshold: 0.3

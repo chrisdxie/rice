@@ -1,0 +1,73 @@
+node_encoder_config:
+
+    rgb_encoder_config:
+        type: cnn  # ['cnn' or 'linear']
+        input_channels: 256
+        output_channels: 256
+        avg_pool_kernel_size: 2  # If you don't want average pooling, use kernel size of 1
+
+        linear_encoder_config:
+            # input_dim: to be computed in network_config.py
+            hidden: [1024, 512]
+            output_dim: 128
+            final_relu: True
+
+    depth_encoder_config:
+        type: cnn   # ['cnn' or 'linear']
+        input_channels : 3
+        output_channels : 256
+        avg_pool_kernel_size: 2  # If you don't want average pooling, use kernel size of 1
+
+        linear_encoder_config:
+            # input_dim: to be computed in network_config.py
+            hidden: [1024, 512]
+            output_dim: 128
+            final_relu: True
+
+    mask_encoder_config:
+        type: cnn   # ['cnn' or 'linear']
+        input_channels: 1
+        output_channels: 64
+        avg_pool_kernel_size: 2  # If you don't want average pooling, use kernel size of 1
+
+        linear_encoder_config:
+            # input_dim: to be computed in network_config.py
+            hidden: [1024, 512]
+            output_dim: 128
+            final_relu: True
+
+    fusion_module_config:
+        # input_dim: to be computed in network_config.py
+        hidden: [512, 512]
+        output_dim: 128
+        final_relu: True
+
+gn_layer_config:
+
+    # Node/edge/global feature dimensions
+    # node_input_channels: to be computed in network_config.py
+    # edge_input_channels: to be computed in network_config.py
+    node_output_channels: 128
+    edge_output_channels: 128
+
+    # MLP structures
+    edge_model_hidden: [256, 256]
+    node_model_mlp1_hidden: [256, 256]
+    node_model_mlp2_hidden: [256]
+
+    # Misc
+    use_groupnorm: True
+num_gn_layers: 4
+
+gn_output_layer:
+    # input_dim: to be computed in network_config.py
+    hidden: [256, 128]
+    output_dim: 1
+    use_groupnorm: True
+    final_relu: False
+
+# Misc stuff
+img_size: [64, 64]
+CNN_reduction_factor: 8
+gc_neighbor_dist: 10
+inference_edge_batch_size: 200

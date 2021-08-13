@@ -1,0 +1,48 @@
+node_encoder_config:
+
+    rgb_encoder_config:
+        type: cnn  # ['cnn' or 'linear']
+        input_channels: 256
+        output_channels: 256
+        avg_pool_kernel_size: 2  # If you don't want average pooling, use kernel size of 1
+
+        linear_encoder_config:
+            # input_dim: to be computed in network_config.py
+            hidden: [1024, 512]
+            output_dim: 128
+            final_relu: True
+
+    depth_encoder_config:
+        type: cnn   # ['cnn' or 'linear']
+        input_channels : 3
+        output_channels : 256
+        avg_pool_kernel_size: 2  # If you don't want average pooling, use kernel size of 1
+
+        linear_encoder_config:
+            # input_dim: to be computed in network_config.py
+            hidden: [1024, 512]
+            output_dim: 128
+            final_relu: True
+
+    mask_encoder_config:
+        type: cnn   # ['cnn' or 'linear']
+        input_channels: 1
+        output_channels: 64
+        avg_pool_kernel_size: 2  # If you don't want average pooling, use kernel size of 1
+
+        linear_encoder_config:
+            # input_dim: to be computed in network_config.py
+            hidden: [1024, 512]
+            output_dim: 128
+            final_relu: True
+
+bg_fusion_module_config:  # This is run after node encoder
+    # input_dim: to be computed in network_config.py
+    hidden: [512, 512]
+    output_dim: 1
+    final_relu: False
+
+# Misc
+img_size: [64,64]
+min_pixels_thresh: 250
+CNN_reduction_factor: 8
