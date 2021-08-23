@@ -51,7 +51,8 @@ You can find the models [here](https://drive.google.com/uc?export=download&id=1h
 
 ### Data
 
-Coming soon!
+You can find the slightly more cluttered version of the Tabletop Object Dataset (TOD) [here](https://drive.google.com/uc?export=download&id=1mD1HSF3O6anDtRGno-YtlFOAiPFfzZIJ). See the [data loading](src/data_loader.py) and [data augmentation](src/data_augmentation.py) code for more details.
+
 
 ### Train the network
 
