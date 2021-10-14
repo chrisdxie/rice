@@ -3,7 +3,7 @@ This is the codebase for our paper:
 
 [RICE: Refining Instance Masks in Cluttered Environments with Graph Neural Networks](https://arxiv.org/abs/2106.15711)<br/>
 [Christopher Xie](https://chrisdxie.github.io/), [Arsalan Mousavian](https://cs.gmu.edu/~amousavi/), [Yu Xiang](https://yuxng.github.io/), [Dieter Fox](https://homes.cs.washington.edu/~fox/)<br/>
-arXiv, 2021
+Conference on Robot Learning - CoRL, 2021
 
 ## Introduction
 
@@ -75,10 +75,10 @@ Our code is released under the MIT license.
 If you find our work helpful in your research, please cite our work.
 
 ```
-@article{xie2021rice,
-author    = {Christopher Xie and Arsalan Mousavian and Yu Xiang and Dieter Fox},
-title     = {RICE: Refining Instance Masks in Cluttered Environments with Graph Neural Networks},
-journal   = {arXiv preprint arXiv:2106.15711},
-year      = {2021}
+@inproceedings{xie2021rice,
+author      = {Christopher Xie and Arsalan Mousavian and Yu Xiang and Dieter Fox},
+title       = {RICE: Refining Instance Masks in Cluttered Environments with Graph Neural Networks},
+booktitle   = {Conference on Robot Learning (CoRL)},
+year        = {2021}
 }
 ```
