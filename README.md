@@ -47,7 +47,7 @@ Note: Currently, [env.yml](env.yml) is setup to use CUDA version 10.2 and PyTorc
 
 ### Models
 
-You can find the models [here](https://drive.google.com/uc?export=download&id=1d-55B2Bg_e2aM5vzka-y2Dx0XbkpOCRl). We provide models for SplitNet, DeleteNet and SGS-Net trained on our synthetic Tabletop Object Dataset (which slightly more cluttered than [before](https://github.com/chrisdxie/uois)). 
+You can find the models [here](https://drive.google.com/uc?export=download&id=1ZXLPhjaRDceWUshsp-KsBqfryPseOLgM). We provide models for SplitNet, DeleteNet and SGS-Net trained on our synthetic Tabletop Object Dataset (which slightly more cluttered than [before](https://github.com/chrisdxie/uois)). 
 
 ### Data
 
